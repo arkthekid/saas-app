@@ -141,8 +141,8 @@ If you're setting up the database from scratch, run this SQL inside the Supabase
       created_at timestamptz default now()
     );
 
-create index bookmarks_user_id_idx on public.bookmarks (user_id);
-create index bookmarks_companion_id_idx on public.bookmarks (companion_id);
+    create index bookmarks_user_id_idx on public.bookmarks (user_id);
+    create index bookmarks_companion_id_idx on public.bookmarks (companion_id);
 
 # Technologies Involved
 
