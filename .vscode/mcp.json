@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "Sentry": {
+      "url": "https://mcp.sentry.dev/mcp/horizon-gt/arkar-converso",
+      "type": "http"
+    }
+  }
+}
