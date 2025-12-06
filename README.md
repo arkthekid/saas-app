@@ -101,18 +101,22 @@ You need:
 
 ---
 
-## 2. **Clone the Repository**
+2. **Cloning the Repository**
 
-  git clone https://github.com/arkthekid/converso.git
-  cd converso
+Clone the repository and navigate to the project directory:
 
-## 3. Install Dependencies
+    git clone https://github.com/arkthekid/converso.git
+    cd threads
 
-  npm install
+3. **Installation**
 
-## 4. Environment Variables
+Install the project dependencies using npm:
 
-Create a file named .env.local in the project root and add:
+    npm install
+
+4. **Set Up Environment Variables**
+
+Create a new file named .env in the root of your project and add the following content:
 
   NEXT_PUBLIC_SUPABASE_URL=
   NEXT_PUBLIC_SUPABASE_ANON_KEY=
@@ -122,7 +126,11 @@ Create a file named .env.local in the project root and add:
 
   OPENAI_API_KEY=
 
-## 5. Configure Supabase Database
+5. **Running the Project**
+
+Start the development server:
+
+    npm run dev
 
 If you're setting up the database from scratch, run this SQL inside the Supabase SQL Editor:
 
@@ -135,10 +143,6 @@ If you're setting up the database from scratch, run this SQL inside the Supabase
 
 create index bookmarks_user_id_idx on public.bookmarks (user_id);
 create index bookmarks_companion_id_idx on public.bookmarks (companion_id);
-
-3. Run the Development Server
-  
-  npm run dev
 
 # Technologies Involved
 
