@@ -113,11 +113,10 @@ cd converso
 npm install
 
 
-## 🌱 Environment Variables
+🌱 Environment Variables
 
-Create a file named **`.env.local`** in the project root and add:
+Create a file named .env.local in the project root and add:
 
-```env
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
@@ -126,11 +125,10 @@ CLERK_SECRET_KEY=
 
 OPENAI_API_KEY=
 
-## 🗄️ Configure Supabase Database
+🗄️ Configure Supabase Database
 
-If you're setting up the database from scratch, run this SQL inside the **Supabase SQL Editor**:
+If you're setting up the database from scratch, run this SQL inside the Supabase SQL Editor:
 
-```sql
 create table public.bookmarks (
   id uuid primary key default gen_random_uuid(),
   user_id text not null,
@@ -141,12 +139,10 @@ create table public.bookmarks (
 create index bookmarks_user_id_idx on public.bookmarks (user_id);
 create index bookmarks_companion_id_idx on public.bookmarks (companion_id);
 
-## 🚀 Run the Development Server
-
-```bash
+3. Run the Development Server
 npm run dev
 
-## 🧰 Technologies Involved
+## Technologies Involved
 
 - **Next.js (App Router)** – Modern server + client component architecture  
 - **Supabase (PostgreSQL)** – Relational database + real-time backend  
