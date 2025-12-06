@@ -103,41 +103,42 @@ You need:
 
 ## 2. **Clone the Repository**
 
-git clone https://github.com/arkthekid/converso.git
-cd converso
+  git clone https://github.com/arkthekid/converso.git
+  cd converso
 
 ## 3. Install Dependencies
 
-npm install
+  npm install
 
 ## 4. Environment Variables
 
 Create a file named .env.local in the project root and add:
 
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
+  NEXT_PUBLIC_SUPABASE_URL=
+  NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
-CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+  CLERK_PUBLISHABLE_KEY=
+  CLERK_SECRET_KEY=
 
-OPENAI_API_KEY=
+  OPENAI_API_KEY=
 
 ## 5. Configure Supabase Database
 
 If you're setting up the database from scratch, run this SQL inside the Supabase SQL Editor:
 
-create table public.bookmarks (
-  id uuid primary key default gen_random_uuid(),
-  user_id text not null,
-  companion_id uuid not null references public.companions(id) on delete cascade,
-  created_at timestamptz default now()
-);
+  create table public.bookmarks (
+    id uuid primary key default gen_random_uuid(),
+    user_id text not null,
+    companion_id uuid not null references public.companions(id) on delete cascade,
+    created_at timestamptz default now()
+  );
 
 create index bookmarks_user_id_idx on public.bookmarks (user_id);
 create index bookmarks_companion_id_idx on public.bookmarks (companion_id);
 
 3. Run the Development Server
-npm run dev
+  
+  npm run dev
 
 # Technologies Involved
 
